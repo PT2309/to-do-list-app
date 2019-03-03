@@ -18,13 +18,13 @@ class AddTodo extends Component{
         item: ''
       })
     }
-
+    
   render(){
     return (
       <div>
         <form onSubmit={this.handleSubmit}>
-          <label>Add todo</label>
-          <input type='text' onChange={this.handleChange} value={this.state.item}/>
+          <label htmlFor='add-todo'>Add todo</label>
+          <input id='add-todo' type='text' onChange={this.handleChange} value={this.state.item}/>
         </form>
       </div>
     )

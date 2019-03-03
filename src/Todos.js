@@ -4,11 +4,11 @@ const Todos = ({ todos, deleteTodo }) => {
   const todoList = todos.length>0 ? todos.map( todo => {
     return (
        <div className='collection-item' key={todo.id}>
-         <span onClick={() => {deleteTodo(todo.id)}}>{todo.item}</span>
+         <span className='blue-text' onClick={() => {deleteTodo(todo.id)}}>{todo.item}</span>
        </div>
     )
   }) : (
-    <p className='center'> You don't have any Todos left </p>
+    <p className='center red-text'> You don't have any Todos left </p>
   )
 
   return(

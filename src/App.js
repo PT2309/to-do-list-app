@@ -29,10 +29,19 @@ class App extends Component {
     })
   }
 
+  componentDidMount(){
+    console.log('Component Mounted');
+  }
+
+  componentDidUpdate(prevProps, prevState, snapshot){
+    console.log('Component Updated');
+    console.log(prevProps, prevState, snapshot);
+  }
+
   render() {
     return (
       <div className="todo-app container">
-        <h3 className="center blue-text"> My Todo list!</h3>
+        <h3 className="center purple-text"> My Todo list!</h3>
         <Todos todos={this.state.todos} deleteTodo={this.deleteTodo} />
         <AddTodo addTodo={this.addTodo} />
       </div>
